@@ -1,0 +1,164 @@
+@(events: List[Event])
+
+@index("Página principal") {
+
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+        <div class="container">
+            <div class="navbar-header page-scroll">
+            
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>             
+                </button>
+                
+                <a class="navbar-brand" href="#page-top">
+                	 <i class="fa fa-circle-o"></i> <span class="light">M</span>enu   
+                </a>
+                            
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li class="page-scroll"><a href="#about">¿Quién soy?</a></li>
+                    <li class="page-scroll"><a href="#services">Servicios</a></li>            
+                    <li class="page-scroll"><a href="#psicoterapia-holistica">¿Psicoterapia holística?</a></li>
+                    <li class="page-scroll"><a href="#calendar">Actividades</a></li>
+                    <li class="page-scroll"><a href="#contact">Contacto</a></li>
+                    <li><a href="@routes.AdminAuthenticationController.adminForm()">Admin</a></li>                   
+                </ul>
+            </div>
+                
+        </div>
+        
+    </nav>  
+    
+</div>
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">                	
+                    	<!-- <p><img src="/assets/images/logo120x120.png" class="img-responsive.img-center" alt="Responsive image" /></p> -->
+                        <h1 class="brand-heading"><span class="light">Aned Machado Díaz </span><i class="fa fa-arrow-circle-right"></i> psicoterapia                        
+                        <small> C V 10570</small></h1>                                          							
+						<p class="info-text">Urb. Lago Jardín 2 Mz. 4 No. 9 | Torrevieja, A 03186 | 966.722.612 | 686.121.366 |
+						<a href="mailto:m_aned&#64;hotmail.com?Subject=Correo%20de%20psicoterapiaholistica" target="_top">info&#64;psicoterapiaholistica.es</a></p>
+                    	<div class="page-scroll">
+	                       	<a href="#about" class="btn btn-circle">
+	                        	<i class="fa fa-angle-double-down animated"></i>
+	                       	</a>
+                		</div> 
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="content-section text-center">
+        <div class="whois-section">
+        	<div class="container">
+	            <div class="col-lg-8 col-lg-offset-2">
+	                <h2>¿Quién soy?</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis sapien justo, non malesuada eros consectetur ut. Integer neque augue, pretium non mattis ac, pellentesque vitae nunc. Cras bibendum ullamcorper ultrices. Vestibulum lorem nisi, dignissim interdum elit porttitor, sodales facilisis lectus. Praesent venenatis gravida nisl at accumsan. </p>
+	                <p>Quisque aliquet magna venenatis urna mollis, vitae fringilla libero egestas. Quisque vitae dolor eget lorem accumsan accumsan a at nisi. Integer placerat nibh sit amet laoreet porta. Phasellus lobortis ipsum dapibus, volutpat mauris quis, molestie nisi. Duis magna velit, faucibus eget tellus in, rutrum sagittis tortor. </p>	           
+	            </div>
+	        </div>
+        </div>
+    </section>
+    
+    <section id="services" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Mis servicios</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis sapien justo, non malesuada eros consectetur ut. Integer neque augue, pretium non mattis ac, pellentesque vitae nunc. Cras bibendum ullamcorper ultrices. Vestibulum lorem nisi, dignissim interdum elit porttitor, sodales facilisis lectus. Praesent venenatis gravida nisl at accumsan. Quisque aliquet magna venenatis urna mollis, vitae fringilla libero egestas. Quisque vitae dolor eget lorem accumsan accumsan a at nisi. Integer placerat nibh sit amet laoreet porta. Phasellus lobortis ipsum dapibus, volutpat mauris quis, molestie nisi. Duis magna velit, faucibus eget tellus in, rutrum sagittis tortor.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="psicoterapia-holistica" class="content-section text-center">
+        <div class="psicoterapia-holistica-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>psicoterapia holística</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis sapien justo, non malesuada eros consectetur ut. Integer neque augue, pretium non mattis ac, pellentesque vitae nunc. Cras bibendum ullamcorper ultrices. Vestibulum lorem nisi, dignissim interdum elit porttitor, sodales facilisis lectus. Praesent venenatis gravida nisl at accumsan. </p>
+	                <p>Quisque aliquet magna venenatis urna mollis, vitae fringilla libero egestas. Quisque vitae dolor eget lorem accumsan accumsan a at nisi. Integer placerat nibh sit amet laoreet porta. Phasellus lobortis ipsum dapibus, volutpat mauris quis, molestie nisi. Duis magna velit, faucibus eget tellus in, rutrum sagittis tortor. </p>
+                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis sapien justo, non malesuada eros consectetur ut. Integer neque augue, pretium non mattis ac, pellentesque vitae nunc. Cras bibendum ullamcorper ultrices. Vestibulum lorem nisi, dignissim interdum elit porttitor, sodales facilisis lectus. Praesent venenatis gravida nisl at accumsan. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="calendar" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Calendario de actividades</h2>               
+                <div class="table-responsive">
+		            <table class="table table-striped">
+					    <thead>					    
+						    <tr>
+				   	            <th>Fecha</th>
+						        <th>Nombre</th>
+						        <th>Descripción</th>
+						        <th>Dirección</th>						        
+						        <th><i class="fa fa-arrow-down"></i></th>
+							</tr>						
+					    </thead>	
+					   			    
+					    <tbody>
+						    @for(event <- events){	
+					            <tr>
+					    	        <th>@event.getYear/@event.getMonth/@event.getDay</th>
+							        <th>@event.getName</th>
+									<th>@event.getDescription</th>
+									<th>@event.getAddress</th>
+							        <th><a href="mailto:m_aned&#64;hotmail.com?Subject=Detalles%20sobre:%20@event.getName" target="_top"><i class="fa fa-envelope"></i></a></th>
+								</tr>		
+						    }
+					    </tbody>
+					</table>
+				</div>				
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contáctanos</h2>
+                <ul class="list-inline banner-social-buttons">
+                    <li><a href="https://twitter.com/" class="btn btn-default btn-lg">
+                    	<i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li><a href="https://facebook.com" class="btn btn-default btn-lg">
+                    	<i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>                 
+                </ul>
+                
+                <img src="/assets/images/logo250x250.png" class="img-responsive.img-center" alt="Responsive image" />
+		
+				<p class="info-text">Urb. Lago Jardín 2 Mz. 4 No. 9 | Torrevieja, A 03186 | 966.722.612 | 686.121.366 | 
+				<a href="mailto:m_aned&#64;hotmail.com?Subject=Correo%20de%20psicoterapiaholistica" target="_top">info&#64;psicoterapiaholistica.es</a></p>
+            
+       			<div class="page-scroll">
+                       <a href="#map" class="btn btn-circle">
+                           <i class="fa fa-angle-double-down animated"></i>
+                       </a>
+                </div>      
+            </div>
+        </div>
+    </section>
+
+    <div id="map">
+    
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+	    <small>
+	    	<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+	    </small>
+    </iframe>
+
+    </div>
+   
+}

@@ -1,0 +1,40 @@
+@(product : Product) 
+
+@index("Product") {
+	
+	<h4>Categories related:</h4>
+	
+	<ol>
+ 	@for(category <- product.category){
+		<li>
+			<a href="/categories/@category.getId"><h4>@category.getName</h4></a> 
+			<h5>@category.getDescription</h5>
+		</li>
+	}
+	</ol>
+	
+	<hr>	
+	<div class="row">	
+		<div class="col-md-4" align="center">
+			<img src="//placehold.it/180x180" class="img-responsive">
+			<div class="caption">			
+				<h4>@product.getName</h4>
+				<h5>Description: @product.getDescription</h5>
+				<h5>Detailed description: pending</h5>
+				<h4>Price: @product.getRRP</h4>
+			</div>	
+		</div>			
+		<div class="col-md-3">		
+			<h5>Quantity in stock:</h5><h4>@product.getQuantityInStock</h4>
+			<form action="@routes.CartController.addProduct(product.getId)" method="post" role="form">
+			  <div class="form-group">			
+			  <label for="product-quantity"><h4>Product</h4></label>		    
+			    <input type="number" class="form-control" id="product-quantity" name="productQuantity" placeholder="quantity">
+			  </div>
+			  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</button>
+			</form>
+		</div>										
+	</div>		
+	<hr>
+		
+}

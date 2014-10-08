@@ -1,0 +1,65 @@
+@(events: List[Event])
+
+@index("Sesión administrativa") {
+
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+        <div class="container">
+        
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand">
+                    <i class="fa fa-play-circle"></i> <span class="light">menu</span> administrativo
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                	<li><a href="@routes.AdminController.createEventForm()">Crear actividad</a></li>
+					<li><a href="@routes.AdminController.deleteEventForm()">Borrar actividad</a></li>	
+		            <li><a href="@routes.AdminController.updateEventForm()">Actualizar actividad</a></li>	
+                    <li><a href="@routes.AdminAuthenticationController.adminLogout()">Log out</a></li>               
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <section id="calendar" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Calendario de actividades</h2>
+                
+                <div class="table-responsive">
+		            <table class="table table-striped">
+					    <thead>					    
+						    <tr>
+					            <th>#</th>
+				   	            <th>Fecha</th>
+						        <th>Nombre</th>
+						        <th>Descripción</th>
+						        <th>Dirección</th>
+							</tr>						
+					    </thead>	
+					   			    
+					    <tbody>
+						    @for(event <- events){	
+					            <tr>
+						            <td>@event.getId</td>
+					    	        <th>@event.getYear/@event.getMonth/@event.getDay</th>
+							        <th>@event.getName</th>
+									<th>@event.getDescription</th>					       
+							        <th>@event.getAddress</th>
+								</tr>		
+						    }
+					    </tbody>
+					</table>
+				</div>
+				
+            </div>
+        </div>
+    </section>		
+	
+}

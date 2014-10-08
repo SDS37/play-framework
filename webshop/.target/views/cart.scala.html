@@ -1,0 +1,43 @@
+@(matchingCart : List[Cart], currentUser : User)
+
+@index("Cart") {
+	
+	<br><h4>Cart</h4> 
+	<hr>
+					
+	<div class="panel panel-default">
+	
+	<div class="panel-heading">Products:</div>
+		<table class="table">		
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Quantity</th>
+					<th>Price x unit</th>
+					<th>Subtotal</th>
+				</tr>
+			</thead>
+			<tbody>							
+				@for(cart <- matchingCart){	
+					<tr>
+					<th><h6>@cart.getProduct.getName</h6></th>
+					<th><h6>@cart.getProductQuantity</h6></th>
+					<th><h6>@cart.getProduct.getRRP</h6></th>
+					<th><h6>@cart.getSubtotal</h6></th>
+					</tr>										
+				}
+			</tbody>			
+		</table>
+	</div>
+	
+	<hr>
+	TOTAL = @currentUser.getTotal
+	<hr>
+	
+	<ul>
+		<li><a href="@routes.ProductController.getProducts()"><h5>Add products</h5></a></li>
+		<li><a href="@routes.OrderController.createOrder()"><h5>Order now</h5></a></li>
+	</ul>
+	
+	<hr>
+}

@@ -1,0 +1,47 @@
+@(currentOrder : Order, cartRegisters : List[Cart], currentUser : User, total : Double)
+
+@index("Order") {
+	
+	<h4>Order</h4>
+	<hr>	
+	<h5>Date = @currentOrder.getDate</h5>
+	<h5>Total bought = @total</h5>
+	<hr>	
+	Client details:
+	<h5>Name: @currentUser.getName</h5>
+	<h5>Address: @currentUser.getAddress</h5>
+	<h5>Phone: @currentUser.getPhoneNumber</h5>	
+	<hr>					
+	<ul>
+		<li><a href="@routes.UserAuthenticationController.userLogout()">Log out</a></li>      
+ 	</ul>		    
+	<hr> 
+		
+	<div class="panel panel-default">
+	
+	<div class="panel-heading">Total Products:</div>
+		<table class="table">		
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Quantity</th>
+					<th>Price x unit</th>
+					<th>Subtotal</th>
+				</tr>
+			</thead>
+			<tbody>							
+				@for(cart <- cartRegisters){	
+					<tr>
+					<th><h6>@cart.getProduct.getName</h6></th>
+					<th><h6>@cart.getProductQuantity</h6></th>
+					<th><h6>@cart.getProduct.getRRP</h6></th>
+					<th><h6>@cart.getSubtotal</h6></th>
+					</tr>										
+				}
+			</tbody>			
+		</table>
+	</div>
+	
+	<hr>	
+	 	   			
+}

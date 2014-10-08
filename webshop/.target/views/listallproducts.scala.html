@@ -1,0 +1,25 @@
+@(products: List[Product])
+
+@index("Products") {
+	
+	<hr>
+	<h4>Products (@products.size() in total)</h4>
+	<hr>
+				   	
+	<div class="row">	
+		@for(product <- products){
+			<div class="col-md-4" align="center">									
+				<img src="//placehold.it/160x160" class="img-responsive">
+				<div class="caption">
+					<a href="/products/@product.getId"><h4>@product.getName</h4></a>
+					@product.getDescription. 
+					<h4>Price: @product.getRRP</h4>		
+					<p><a href="@routes.ProductController.getProduct(product.getId)" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</a></p>
+				</div>								
+			</div>					
+		}				
+	</div>
+	<hr>
+			
+}
+

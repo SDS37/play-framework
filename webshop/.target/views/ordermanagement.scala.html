@@ -1,0 +1,12 @@
+@()
+
+@index("Order") {
+	
+	<h4>Order management</h4><hr></hr>
+	
+	<ol>
+		<li><a href="@routes.OrderController.createOrder()"><h5>Continue (if logged in)</h5></a></li>
+		<li><a href="@routes.CreateUserController.createUserForm()"><h5>New user</h5></a></li>
+	</ol>
+		
+}

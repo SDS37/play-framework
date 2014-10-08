@@ -1,0 +1,12 @@
+@()
+
+@index("Products management") {
+	
+	<h4>Products management</h4><hr></hr>
+	
+	<ol>
+		<li><a href="@routes.ProductController.getProducts()"><h5>Show products</h5></a></li>
+		<li><a href="@routes.AdminCreateProductController.createProduct()"><h5>Create product</h5></a></li>
+	</ol>
+		
+}

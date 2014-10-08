@@ -1,0 +1,14 @@
+@()
+
+@index("Administrator session") {
+	
+	<h3>Administration area</h3>
+	<hr></hr>
+	
+	<h4>Management</h4><br>
+	<ol>
+		<li><a href="@routes.AdminController.categoriesManagement()"><h4>Categories</h4></a></li>
+		<li><a href="@routes.AdminController.productsManagement()"><h4>Products</h4></a></li>
+	</ol>
+	
+}

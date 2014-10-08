@@ -1,0 +1,12 @@
+@()
+
+@index("Categories management") {
+	
+	<h4>Categories management</h4><hr></hr>
+	
+	<ol>
+		<li><a href="@routes.CategoryController.getCategories()"><h5>Show categories</h5></a></li>
+		<li><a href="@routes.AdminCreateCategoryController.createCategory()"><h5>Create category</h5></a></li>
+	</ol>
+		
+}

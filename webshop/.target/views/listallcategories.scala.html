@@ -1,0 +1,13 @@
+@(categories: List[Category])
+
+@index("Categories") {
+	
+	<hr>
+	<ol>
+		@for(category <- categories){
+			<li><a href="/categories/@category.getId"><h4>@category.getName</h4></a></li>
+		}
+	</ol>	
+	<hr>
+		
+}

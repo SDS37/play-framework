@@ -1,0 +1,64 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET   	/index            			controllers.Application.main()
+
+# Category
+GET   	/categories             	controllers.CategoryController.getCategories()
+GET   	/categories/:id             controllers.CategoryController.getCategory(id: Int)
+
+GET     /categories-json            controllers.CategoryController.getCategoriesToJson()
+GET     /categories-json/:id        controllers.CategoryController.getCategoryToJson(id: Int)
+
+# Product
+GET   	/products             		controllers.ProductController.getProducts()
+GET   	/products/:id             	controllers.ProductController.getProduct(id: Int)
+
+GET     /products-json            	controllers.ProductController.getProductsToJson()
+GET     /products-json/:id          controllers.ProductController.getProductToJson(id: Int)
+
+# Cart
+GET		/cart						controllers.CartController.getCart()
+POST    /products/:id               controllers.CartController.addProduct(id: Int)
+
+# Order
+# GET 	/order-management			controllers.OrderController.orderManagement()
+GET     /order                      controllers.OrderController.createOrder()
+GET     /products-shopped-json      controllers.OrderController.getCustomizedOrdersToJson()
+
+# User Register
+GET 	/user-register				controllers.CreateUserController.createUserForm()
+POST 	/user-register				controllers.CreateUserController.createUser()
+
+# User Login
+GET   	/user-login	    			controllers.UserAuthenticationController.userForm()
+POST   	/user-login 				controllers.UserAuthenticationController.userLogin()
+
+# User session
+GET    	/user/	     		  		controllers.UserController.userSession()
+
+# User Logout
+GET    	/user-login          		controllers.UserAuthenticationController.userLogout()
+
+# Administration Login
+GET   	/admin-login	    		controllers.AdminAuthenticationController.adminForm()
+POST   	/admin-login 				controllers.AdminAuthenticationController.adminLogin()
+
+# Administration session
+GET    	/admin-user      		  	controllers.AdminController.adminSession()
+
+GET    	/categories-management      controllers.AdminController.categoriesManagement()
+GET    	/new-category		        controllers.AdminCreateCategoryController.createCategoryForm()
+POST	/new-category		        controllers.AdminCreateCategoryController.createCategory()
+
+GET    	/products-management        controllers.AdminController.productsManagement()
+GET     /new-product		        controllers.AdminCreateProductController.createProductForm()
+POST	/new-product		        controllers.AdminCreateProductController.createProduct()
+
+# Admin logout
+GET    	/admin-login   				controllers.AdminAuthenticationController.adminLogout() 
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

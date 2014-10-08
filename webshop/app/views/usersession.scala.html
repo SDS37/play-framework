@@ -1,0 +1,13 @@
+@(userName : String)
+
+@index("User session") {
+	
+	<h5>User session:</h5> <h4>Welcome @userName</h4>
+	<hr>
+		
+	<ol>
+		<li><a href="@routes.CartController.getCart()"><h5>Go to cart</h5></a></li>
+		<li><a href="@routes.UserAuthenticationController.userLogout()"><h5>Log out</h5></a></li>
+	</ol>
+		
+}
